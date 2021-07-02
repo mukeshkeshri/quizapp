@@ -1,10 +1,10 @@
-import logo from './logo.svg';
+import Platewrap from './components/plate/plate'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>welcome</h1>
+      <Platewrap/>
     </div>
   );
 }

@@ -2,9 +2,11 @@
 
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: left;
     flex-wrap: wrap;
-    padding: 10px;
+    padding: 50px;
     border-radius: 10px;
+    background-color: chartreuse;
     border-color: blue;
+    margin-bottom: 50px;
 }

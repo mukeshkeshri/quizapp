@@ -1,8 +1,18 @@
 .plate{
-    background-color: #ffb398;
+
+    height:100px;
+    width: 100px;
+    background-color: hsl(56, 98%, 54%);
     border-radius: 50%;
+    font-size: 30px;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
 }
 
 .section{
     width: 90%;
+    align-items: center;
+    margin: auto;
+    padding-bottom: 100px;
 }
