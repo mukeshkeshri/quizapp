@@ -4,9 +4,10 @@
     flex-direction: row;
     justify-content: left;
     flex-wrap: wrap;
-    padding: 50px;
+    padding: 2%;
     border-radius: 10px;
-    background-color: chartreuse;
-    border-color: blue;
-    margin-bottom: 50px;
+    background-color:#ffff;
+    border:2px solid #fcf6f6;
+    box-shadow: 5px 10px 10px #888888;
+    margin-bottom: 20px;
 }

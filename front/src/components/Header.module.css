@@ -1,0 +1,28 @@
+.header{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    background-color: blue;
+    height: 4rem;
+    width: 100%;
+    margin-bottom: 5rem;
+    padding:0.5rem;
+}
+
+.profile{
+
+    height:3rem;
+    width: 3rem;
+    background-color: hsl(56, 98%, 54%);
+    border-radius: 50%;
+    border:1px solid #fcf6f6;
+    font-size: 2rem;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.brand{
+    font-size: 2rem;
+    color: #ffff;
+}

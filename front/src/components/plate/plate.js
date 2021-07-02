@@ -1,45 +1,33 @@
-import React, { useState } from 'react';
+import React, { useImperativeHandle, useState } from 'react';
 import classes from './plate.module.css';
 import Card from '../UI/Card'
+import QuestionTemplate from '../QuestionTemplate/QuestionTemplate'
+import Question from '../question';
 
-const question=[
-    {   
-        id:1,
-        que:"who are you",
-        option1:1
-    },
-    {   
-        id:2,
-        que:"who are you",
-        option1:1
-
-    },
-    {   
-        id:3,
-        que:"who are you",
-        option1:1
-    },
-
-];
-
+const question=Question;
 const  Platewrap = () =>{
-  
-    const [questionNo, setquestionNo]= useState(1);
+    
+    const [CurrquestionNo,setCurrquestionNo]= useState(0);
+    const [PrevquestionNo,setPrevquestionNo]= useState(-1);
+    
+    const handleQuestionNo=(index)=>{
+         setPrevquestionNo(CurrquestionNo);
+         setCurrquestionNo(index);
+    }
 
     const plate= question.map((que,index) => 
-    <div className={classes.plate}> 
-    {index} </div>);
-  
+    <button id={index} className={classes.plate} onClick={()=>handleQuestionNo(index)}> 
+    {index} </button>);
+    
     return (<section className={classes.section}>
          
           <Card>
-          {plate}
+              {plate}
           </Card> 
           <Card>
-            {question[questionNo].que}
-          </Card>
-           
-         
+                <QuestionTemplate CurrQuestion={question[CurrquestionNo]}/>
+                {PrevquestionNo}
+          </Card>   
     </section>
     );
 };
